@@ -471,8 +471,9 @@ nav ul li:hover a {
     columns: var(--color-used);
     margin:1rem 0.7rem 0 0;
 }
-.reasheading{
-    display: none;
+.resheading{
+    /* display: none; */
+    visibility: hidden;
 }
 @media(max-width:450px){
     .search-element .form-control{

@@ -20,7 +20,7 @@ toggleButton.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 //APIKEY: 
-// Titles: https://omdbapi.com/?s=thor&page=1&apikey=fc1fef96
+// Titles: https://omdbapi.com/?s=thor&page=1&apikey=b00e95a6
 // details: http://www.omdbapi.com/?i=tt3896198&apikey=b00e95a6
 
 // ... existing code ...
@@ -28,10 +28,6 @@ toggleButton.addEventListener('click', () => {
 const movieSearchBox = document.getElementById('movie-search-box');
 const searchList = document.getElementById('search-list');
 const resultGrid = document.getElementById('result-grid');
-
-// ... existing code ...
-
-
 
 
 // load movies from API
@@ -115,7 +111,7 @@ function displayMovieDetails(details){
         <p class = "awards"><b><i class = "fas fa-award"></i></b> ${details.Awards}</p>
     </div>
     `;
-    // reshead.style.display=block;
+    reshead.style.visibility = 'visible';
     document.getElementById('result-show').scrollIntoView();
 }
 
