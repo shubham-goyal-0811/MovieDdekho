@@ -9,10 +9,6 @@
     font-family: 'Poppins', sans-serif;
     background-image:url('popcorn.jpeg') ;
 }
-.wrapper{
-    display: none;
-
-}
 body {
     min-height: 100vh;
     background:linear-gradient(#2f2c2c,#e7dcdc) ;

@@ -4,12 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-  <title>Movie Design</title>
+  <title>Movie Dekho</title>
   <style>
     * {
       margin: 0;
@@ -185,6 +184,7 @@
       border: none;
       outline: none;
       font-weight: bold;
+      text-decoration: none;
     }
 
     .movie-list-container {
@@ -269,6 +269,7 @@
       left: 50px;
       opacity: 0;
       transition: 1s all ease-in-out;
+      text-decoration: none;
     }
 
     .arrow {
@@ -347,13 +348,15 @@
         display: none;
       }
     }
+
+    .wrapper {
+      display: none;
+    }
   </style>
 </head>
 
 <body>
-  <div class="wrapper">
-
-
+  <wrapper class="wrapper">
     <div class="navbar">
       <div class="navbar-container">
         <div class="logo-container">
@@ -401,7 +404,8 @@
           <p class="featured-desc">In 2045, people seek to escape from reality through a virtual reality entertainment
             universe called the OASIS (Ontologically Anthropocentric Sensory Immersive Simulation), created by James
             Halliday and Ogden Morrow of Gregarious Games.</p>
-          <button class="featured-button">WATCH</button>
+          <a href="https://youtu.be/cSp1dM2Vj48?si=zj_SqSL6srlxnkw0" target="_blank"
+            class="featured-button">WATCH</button></a>
         </div>
         <div class="movie-list-container">
           <h1 class="movie-list-title">NEW RELEASES</h1>
@@ -413,7 +417,8 @@
                 <p class="movie-list-item-desc">A sensitive and soulful man earns a living by writing personal letters
                   for
                   other people</p>
-                <button class="movie-list-item-button">Watch</button></a>
+                <a href="https://youtu.be/dJTU48_yghs?si=SaB4kk5nFfpVeh2Z" target="_blank"
+                  class="movie-list-item-button">Watch</button></a>
               </div>
               <div class="movie-list-item">
                 <img class="movie-list-item-img" src="2.jpeg" alt="">
@@ -421,21 +426,24 @@
                 <p class="movie-list-item-desc">A space opera set in a fictional universe where the Galactic Empire
                   rules
                   the galaxy</p>
-                <button class="movie-list-item-button">Watch</button>
+                <a href="https://youtu.be/sGbxmsDFVnE?si=BzwZqXDO29PDo4lL" target="_blank" button
+                  class="movie-list-item-button">Watch</button></a>
               </div>
               <div class="movie-list-item">
                 <img class="movie-list-item-img" src="3.jpg" alt="">
                 <span class="movie-list-item-title">Storm</span>
                 <p class="movie-list-item-desc">The story talks about the secret weather control experiment which goes
                   awry</p>
-                <button class="movie-list-item-button">Watch</button>
+                <a href="https://youtu.be/nJd0sgdC7t8?si=nhp1hglYteKAgEQZ" target="blank"
+                  class="movie-list-item-button">Watch</button></a>
               </div>
               <div class="movie-list-item">
                 <img class="movie-list-item-img" src="4.jpg" alt="">
                 <span class="movie-list-item-title">1917</span>
                 <p class="movie-list-item-desc">A 2019 movie about two British soldiers, Schofield (George MacKay), who
                   must deliver a message to a nearby battalion during World War I</p>
-                <button class="movie-list-item-button">Watch</button>
+                <a href="https://youtu.be/YqNYrYUiMfg?si=0FYuxhg28WzLoMxq" target="_blank"
+                  class="movie-list-item-button">Watch</button></a>
               </div>
               <div class="movie-list-item">
                 <img class="movie-list-item-img" src="5.jpg" alt="">
@@ -479,21 +487,24 @@
                 <span class="movie-list-item-title">Oblivion</span>
                 <p class="movie-list-item-desc">The movie is about the survival of humanity and a mysterious, violent
                   alien threat</p>
-                <button class="movie-list-item-button">Watch</button>
+                <a href="https://youtu.be/XmIIgE7eSak?si=YDNiSM5_rPVRnwBI" target="_blank"
+                  class="movie-list-item-button">Watch</button></a>
               </div>
               <div class="movie-list-item">
                 <img class="movie-list-item-img" src="9.jpg" alt="">
                 <span class="movie-list-item-title">Hobbit</span>
                 <p class="movie-list-item-desc">Hobbit who is convinced by Gandalf to join a group of dwarves on a quest
                   to reclaim the Lonely Mountain</p>
-                <button class="movie-list-item-button">Watch</button>
+                <a href="https://youtu.be/SDnYMbYB-nU?si=coxY-M9esfHnFe8n" target="_blank"
+                  class="movie-list-item-button">Watch</button></a>
               </div>
               <div class="movie-list-item">
                 <img class="movie-list-item-img" src="10.jpg" alt="">
                 <span class="movie-list-item-title">Due Date</span>
                 <p class="movie-list-item-desc">A 2010 comedy film about a man who must travel across the country to Los
                   Angeles in time for his child's birth</p>
-                <button class="movie-list-item-button">Watch</button>
+                <a href="https://youtu.be/1p3NnJ_oiE0?si=Q2MjHcu0Z6fb4QfX" target="_blank"
+                  class="movie-list-item-button">Watch</button></a>
               </div>
               <div class="movie-list-item">
                 <img class="movie-list-item-img" src="11.jpg" alt="">
@@ -501,7 +512,8 @@
                 <p class="movie-list-item-desc">A 2010 action comedy crime movie about a high school student who becomes
                   a
                   superhero</p>
-                <button class="movie-list-item-button">Watch</button>
+                <a href="https://youtu.be/Td921lYSBIA?si=YNK5QxKMx-dhVa4r" target="_blank"
+                  class="movie-list-item-button">Watch</button></a>
               </div>
               <div class="movie-list-item">
                 <img class="movie-list-item-img" src="12.jpg" alt="">
@@ -519,11 +531,12 @@
                 <button class="movie-list-item-button">Watch</button>
               </div>
               <div class="movie-list-item">
-                <img class="movie-list-item-img" src="12.jpg" alt="">
-                <span class="movie-list-item-title">Emoji Movie</span>
-                <p class="movie-list-item-desc">The movie is about Gene, an emoji with multiple facial expressions, who
-                  goes on a journey to become a normal emoji with a single expression</p>
-                <button class="movie-list-item-button">Watch</button>
+                <img class="movie-list-item-img" src="20.webp" alt="">
+                <span class="movie-list-item-title">John Wick</span>
+                <p class="movie-list-item-desc">An ex-hit-man comes out of retirement to track down the gangsters that
+                  killed his dog and took everything from him</p>
+                <a href="https://youtu.be/C0BMx-qxsP4?si=lfcM3PxPjKPwTFC0" target="_blank"
+                  class="movie-list-item-button">Watch</button></a>
               </div>
             </div>
             <i class="fas fa-chevron-right arrow"></i>
@@ -531,7 +544,51 @@
         </div>
       </div>
     </div>
-  </div>
+    <div class="footer" id="contact">
+      <div class="footer-flex">
+        <div class="footer1">
+          <div>
+            <img src="logo.png" alt="">
+          </div>
+          <section>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium modi nobis qui? Vero cumque iure velit
+            quibusdam.
+          </section>
+          <div class="footer-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer1">
+          <h3>contact info</h3>
+          <div class="location">
+            <span><i class="fas fa-map-marker-alt"></i></span>
+            <a href="#">our location</a>
+            <section>India</section>
+          </div>
+          <div class="location">
+            <span><i class="fas fa-phone"></i></span>
+            <a href="#">Contact Us At-></a>
+            <section>+91 9463010958</section>
+            <section>+91 7568095467</section>
+          </div>
+        </div>
+        <div class="footer1">
+          <h3>subscribe</h3>
+          <form action="">
+            <input type="email" name="" id="" placeholder="your Email">
+            <a href="#">subscribe</a>
+          </form>
+          <div class="check">
+            <input type="checkbox" name="" id="inpt">
+            <label for="inpt">I have read and agree to all terms & conditions.</label>
+          </div>
+        </div>
+      </div>
+  </wrapper>
   <script>
     // for darkmode
     const ball = document.querySelector(".toggle-ball");

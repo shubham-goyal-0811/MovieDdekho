@@ -135,3 +135,74 @@ window.addEventListener('DOMContentLoaded', () => {
             }, 2000);
         });
 });
+// document.addEventListener("DOMContentLoaded", function () {
+//     var navbar = document.getElementById("navbar");
+//     var fanfavouritesSection = document.getElementById("fan-favourites");
+//     var homesection = document.getElementById("home");
+//     let lastpos = 0;
+//     window.addEventListener("scroll", function () {
+//         var homesectiontop = homesection.offsetTop;
+//       var fanfavouritesSectionTop = fanfavouritesSection.offsetTop;
+//       var scrollPosition = window.scrollY;
+//         if(scrollPosition>=homesectiontop || scrollPosition<=lastpos){
+//             navbar.style.backdropFilter="blur(10px)";
+//             lastpos=scrollPosition;
+//         }
+//         else if (scrollPosition >= fanfavouritesSectionTop || scrollPosition<=lastpos) {
+//         navbar.style.backgroundColor = "yellow"; // Change to your desired background color
+//         lastpos=scrollPosition
+//        }
+//     });
+//   });
+document.addEventListener("DOMContentLoaded", function () {
+    var navbar = document.getElementById("navbar");
+    var homesection = document.getElementById("home");
+    var fanfavouritesSection = document.getElementById("fan-favourites");
+    var lastScrollPosition = 0;
+
+    window.addEventListener("scroll", function () {
+      var homesectionTop = homesection.offsetTop;
+      var fanfavouritesSectionTop = fanfavouritesSection.offsetTop;
+      var scrollPosition = window.scrollY;
+
+      if (scrollPosition <= 0 || scrollPosition <= lastScrollPosition) {
+        // At the top or scrolling up
+        navbar.style.backdropFilter = "blur(0)";
+        navbar.style.backgroundColor = "black"; // Change to your desired background color
+      } else if (scrollPosition >= fanfavouritesSectionTop) {
+        // Scrolling down or reaching the fanfavourites section
+        navbar.style.backdropFilter = "blur(10px)";
+        navbar.style.backgroundColor = "transparent"; // Set your default background color
+      }
+
+      lastScrollPosition = scrollPosition;
+    });
+  });
+
+//   document.addEventListener("DOMContentLoaded", function () {
+//     var navbar = document.getElementById("navbar");
+//     var fanfavouritesSection = document.getElementById("fanfavourites");
+//     var lastScrollPosition = 0;
+
+//     window.addEventListener("scroll", function () {
+//       var fanfavouritesSectionTop = fanfavouritesSection.offsetTop;
+//       var scrollPosition = window.scrollY;
+
+//       if (scrollPosition > lastScrollPosition) {
+//         //srolling down
+//         if (scrollPosition >= fanfavouritesSectionTop) {
+//             navbar.style.backgroundColor = "yellow"; // Adjust the blur value as needed
+//           lastScrollPosition = scrollPosition;
+//         } else {
+//           navbar.style.backdropFilter = "blur(10)"; // Set your default blur value
+//           lastScrollPosition = scrollPosition;
+//         }
+//       } else {
+//         // Scrolling up
+//         navbar.style.backdropFilter = "blur(0)"; // Set your default blur value
+//         lastScrollPosition = scrollPosition;
+//       }
+
+//       lastScrollPosition = scrollPosition;
+//     });
+//   });
