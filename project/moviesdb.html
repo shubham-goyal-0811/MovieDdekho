@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
   <title>Movie Dekho</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     * {
       margin: 0;
     }
@@ -135,7 +139,7 @@
     .sidebar {
       width: 50px;
       height: 100%;
-      background-color: black;
+      background-color: rgb(21, 21, 21);
       position: fixed;
       top: 0;
       display: flex;
@@ -343,6 +347,124 @@
       transform: translateX(-20px);
     }
 
+    .footer {
+      background-color: rgb(23, 22, 22);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      padding: 64px 0px;
+    }
+
+    .footer .footer-flex {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      grid-row-gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-flex .footer1 {
+      width: 32%;
+      color: rgb(224, 201, 25);
+    }
+
+    .footer1 img {
+      margin-bottom: 20px;
+    }
+
+    .footer1 section {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .footer1 .footer-links a {
+      text-decoration: none;
+      color: rgb(224, 201, 25);
+      margin: 0 8px;
+      font-size: 14px;
+      display: inline-block;
+      transition: .4s ease-in-out;
+    }
+
+    .footer-links a:hover {
+      color: var(--main-color);
+    }
+
+    .footer1 h3 {
+      text-transform: capitalize;
+      margin-bottom: 30px;
+      display: inline-block;
+    }
+
+    .footer1 .location {
+      margin-left: 30px;
+      margin-bottom: 14px;
+    }
+
+    .location span {
+      margin-left: -30px;
+      display: inline-block;
+      margin-right: 13px;
+    }
+
+    .location a {
+      text-decoration: none;
+      color: rgb(224, 201, 25);
+      text-transform: capitalize;
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+
+    .location section {
+      margin-bottom: 4px;
+    }
+
+    .footer1 form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 52px;
+      line-height: 52px;
+      background: #ffffff;
+      color: black;
+      border-radius: 30px;
+      overflow: hidden;
+    }
+
+    .footer1 form input {
+      border: none;
+      outline: none;
+      padding-left: 10px;
+      font-size: 13px;
+      color: rgb(0, 0, 0);
+      width: 75%;
+    }
+
+    .footer1 form a {
+      text-decoration: none;
+      text-transform: capitalize;
+      font-size: 13px;
+      color: rgb(186, 167, 24);
+      background: var(--main-color);
+      width: 25%;
+      text-align: center;
+    }
+
+    @media only screen and (max-width: 740px) {
+      .menu-container {
+        display: none;
+      }
+    }
+
+    .wrapper {
+      display: none;
+    }
+
+
     @media only screen and (max-width:740px) {
       .menu-container {
         display: none;
@@ -366,9 +488,9 @@
           <ul class="menu-list">
             <li class="menu-list-item active"><a href="">Home</a></li>
             <li class="menu-list-item"><a href="">Movies</a></li>
-            <li class="menu-list-item"><a href="">Series</a></li>
-            <li class="menu-list-item"><a href="">Popular</a></li>
-            <li class="menu-list-item"><a href="">Trends</a></li>
+            <li class="menu-list-item"><a href="">Search</a></li>
+            <li class="menu-list-item"> <a href="#contact">Contact Us</a></li>
+            <li class="menu-list-item"><a href="">About</a></li>
 
           </ul>
         </div>
@@ -544,11 +666,11 @@
         </div>
       </div>
     </div>
-    <div class="footer" id="contact">
+    <footer class="footer" id="contact">
       <div class="footer-flex">
         <div class="footer1">
           <div>
-            <img src="logo.png" alt="">
+            <img src="logo.png" alt="MoviesDekho">
           </div>
           <section>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium modi nobis qui? Vero cumque iure velit
@@ -563,24 +685,25 @@
         </div>
 
         <div class="footer1">
-          <h3>contact info</h3>
+          <h3>Contact Info</h3>
           <div class="location">
             <span><i class="fas fa-map-marker-alt"></i></span>
-            <a href="#">our location</a>
+            <a href="#">Our Location</a>
             <section>India</section>
           </div>
           <div class="location">
             <span><i class="fas fa-phone"></i></span>
-            <a href="#">Contact Us At-></a>
+            <a href="#">Contact Us At</a>
             <section>+91 9463010958</section>
             <section>+91 7568095467</section>
           </div>
         </div>
+
         <div class="footer1">
-          <h3>subscribe</h3>
+          <h3>Subscribe</h3>
           <form action="">
-            <input type="email" name="" id="" placeholder="your Email">
-            <a href="#">subscribe</a>
+            <input type="email" name="" id="" placeholder="Your Email">
+            <a href="#">Subscribe</a>
           </form>
           <div class="check">
             <input type="checkbox" name="" id="inpt">
@@ -588,6 +711,9 @@
           </div>
         </div>
       </div>
+    </footer>
+
+
   </wrapper>
   <script>
     // for darkmode
@@ -619,21 +745,20 @@
       });
       console.log(Math.floor(window.innerWidth / 270));
     });
-
     window.addEventListener('DOMContentLoaded', () => {
-      // Load the loader HTML
-      fetch('loading.html')
+    // Load the loader HTML
+    fetch('loading.html')
         .then(response => response.text())
         .then(html => {
-          document.body.insertAdjacentHTML('afterbegin', html);
-          // After 2 seconds, hide the loader and show the quiz content
-          setTimeout(() => {
-            document.querySelector('.middle').style.display = 'none';
-            document.querySelector('.wrapper').style.display = 'block';
-            triggerAnimaitons();
-          }, 2000);
+            document.body.insertAdjacentHTML('afterbegin', html);
+            // After 2 seconds, hide the loader and show the quiz content
+            setTimeout(() => {
+                document.querySelector('.middle').style.display = 'none';
+                document.querySelector('.wrapper').style.display = 'block';
+                triggerAnimaitons() ;
+            }, 2000);
         });
-    });
+});
   </script>
 
 </body>
